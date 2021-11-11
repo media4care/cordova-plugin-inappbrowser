@@ -745,8 +745,9 @@ public class InAppBrowser extends CordovaPlugin {
                     _close = close;
                 }
                 else {
+                    // FIXME: rename all instances of close button to back button
                     ImageButton close = new ImageButton(cordova.getActivity());
-                    int closeResId = activityRes.getIdentifier("ic_action_close", "drawable", cordova.getActivity().getPackageName());
+                    int closeResId = activityRes.getIdentifier("ic_action_back", "drawable", cordova.getActivity().getPackageName());
                     Drawable closeIcon = activityRes.getDrawable(closeResId);
                     close.setImageDrawable(closeIcon);
                     close.setScaleType(ImageView.ScaleType.FIT_CENTER);
